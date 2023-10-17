@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+    --primary-font: 'Sora', sans-serif;
+    --star-color: #F5C044;
+    --star-inactive: #D4D4D8;
+    --check-color: #4CA154;
+    --primary-text-color: #18181B;
+    --secondary-text-color: #52525A;
+    --bg-color: #FAFAF9;
+    --card-bg: #fff;
+}
+
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+    background-color: var(--bg-color);
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    padding-block-start: 4rem;
+}
+
+.flow > * + * {
+    margin-block-start: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3.6rem;
+}
+
+.checklist li {
+    margin-block-end: 1rem;
+    font-size: 1.4rem;
+    padding-inline-start: 3rem;
+    background: url('./img/Done_ring_round_fill.svg') left top / 2rem no-repeat;
+}
+
+.card {
+    border-radius: 2rem;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    background-color: var(--card-bg);
+    max-width: 30rem;
+}
+
+.card--right {
+    margin-inline-start: auto;
+}
+
+.card:not(:last-child) {
+    margin-block-end: 2rem;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    margin-block-end: 2rem;
+}
+
+.card__logo {
+    width: 10rem;
+    margin-inline-end: 2rem;
+}
+
+.card__title {
+    font-size: 1.6rem;
+    margin-block-end: 1rem;
+}
+
+.card__text {
+    font-size: 1.4rem;
+}
+
+
+.stars {
+    display: flex;
+}
+
+@media screen and (min-width: 900px) {
+
+    .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .col {
+        width: 50%;
+    }
+}
